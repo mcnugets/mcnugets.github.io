@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>EDROPCNN</title>
+        <link href="css/styles.css" rel="stylesheet" />
+
+        
+
+    </head>
+    <body id="page-top" class="fw-light" style="text-align: justify;">
+            <div class="container px-4 text-center mt-3">
+                <h2>Effectiveness of different dimensionality reduction techniques on pruned deep neural network</h2>
+                <a href="https://www.linkedin.com/in/sultangazy-yergaliyev-2aa956231/">Sultangazy Yergaliyev
+                
+
+            </div>
+            
+            <div class="container px-4 text-center mt-3 g-3 ">
+                <a class="btn btn-lg btn-light mx-3" href="https://github.com/mcnugets/Effectiveness-of-different-dimensionality-reduction-techniques-on-pruned-deep-neural-network">
+                    GitHub</a>
+                <a class="btn btn-lg btn-light mx-3" href="https://mcnugets.github.io/thesis/01.pdf">
+                    Paper</a>
+            </div>
+            <div class="container px-4 mt-5 ">
+                <div class="row gx-4 justify-content-center ">
+                    <div class="col-lg-8 ">
+                        <h3>Abstract</h3>
+                        <p >
+                            In machine learning, throughout the years the architecture of neural networks has been under
+                            rigorous observation and has been developed constantly. However, when it comes to the
+                            complexity of the data and the structure of layers within the network our best strategy is to
+                            come up with the best architecture so that when we use the network for any reoccurring
+                            problem, heavy computational consumption can be avoided. Hence pruning is proposed by
+                            many papers that explore the field of pruning on how to find an effective subnetwork that has
+                            just as much efficiency as the original network. Furthermore, there are many optimization
+                            techniques besides pruning, one of which is dimensional reduction, which is a projection of
+                            multivariate data into a lower dimension, for effectivity purposes. In this paper, we propose
+                            dimensional reduction methods like Principal component analysis(PCA), Independent
+                            Component Analysis(ICA), and Isometric mapping(Isomap), and utilize these methods for
+                            weight matrices decomposition within the pre-trained network that were trained using datasets
+                            like CIFAR10, and MNIST. We use those methods in two scenarios: one is where the network
+                            is unpruned, and two where we prune the network and then apply dimensionality reduction
+                            afterwards. Moreover, we develop a technique that combines dimensional reduction and matrix
+                            transformation that helps us to preserve as much information as possible. We believe that this
+                            experiment provides interesting results with some potential.
+                        </p>
+                    </div>
+                </div>
+            </div>
+       
+        <!-- Overview -->
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h3>Summary</h3>
+                        <div class="card" >
+                        <img  src="./images/before dr.png" class=" img-fluid rounded float-start">
+                        <div class="card-body">
+                            <p class="card-title text-center"> network before dimensional reduction </p>
+                        </div>
+                        </div>
+                        <div class="card" >
+                        <img  src="./images/after dr.png" class=" img-fluid rounded float-start">
+                        <div class="card-body">
+                            <p class="card-title text-center"> network after dimensional reduction </p>
+                        </div>
+                        </div>
+                        <p>
+                            The project focused on the use of dimensional reduction techniques and applying them to the pruned convolutional neural network. 
+                            This aims to achieve an improved optimization via extracting the sparse weight matrices(after pruning) of a particular network, 
+                            hence solving the problem of network size and computation time. As opposed to training a relatively smaller network, the goal is 
+                            to avoid unnecessary computations and preserve as much information as possible after performing dimensional reduction. This project performed 
+                            such experiments on custom-made convolutional neural networks using open-source datasets: CIFAR10 and MNIST. Moreover, the testing was conducted 
+                            using linear and non-linear dimensional reduction techniques, thus to evaluate their potential. The methods are PCA, ICA, Isomap, NMF, and MDS. 
+                            Based on my personal analysis, Isomap performs poorly on complex datasets like CIFAR10, hence I used MNIST for this case. Hypotherically it can be assumed that after pruning has been completed, 
+                            weight matrices achieve a sparse state. Based on this we can ask ourselves if we can reduce such matrix dimensions by minimizing or eliminating elements with the value of 0, and this is where we utilize dimensional reduction. 
+                            Three last fully-connected layers of the custom-made network were used for weight extraction. Once weight matrix decomposition is completed, the idea was to adapt a new derived matrix to the relevant network.
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
