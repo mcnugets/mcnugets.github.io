@@ -10837,3 +10837,15 @@ section {
   padding-top: 9rem;
   padding-bottom: 9rem;
 }
+body {
+  font-family: 'Georgia', serif;
+  color: #333;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
